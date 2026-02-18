@@ -1,18 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
+
     // Mobile Menu Toggle
-    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuBtn = document.getElementById('mobile-menu');
     const navMenu = document.querySelector('.nav-menu');
+    const bars = document.querySelectorAll('.bar');
 
-    mobileMenu.addEventListener('click', () => {
+    mobileMenuBtn.addEventListener('click', () => {
         navMenu.classList.toggle('active');
-        mobileMenu.classList.toggle('active');
 
-        // Animate hamburger icon
-        const bars = mobileMenu.querySelectorAll('.bar');
-        if (navMenu.classList.contains('active')) {
-            bars[0].style.transform = 'rotate(-45deg) translate(-5px, 6px)';
+        // Very simple animation state toggle
+        mobileMenuBtn.classList.toggle('open');
+
+        if (mobileMenuBtn.classList.contains('open')) {
+            bars[0].style.transform = 'translateY(8px) rotate(45deg)';
             bars[1].style.opacity = '0';
-            bars[2].style.transform = 'rotate(45deg) translate(-5px, -6px)';
+            bars[2].style.transform = 'translateY(-8px) rotate(-45deg)';
         } else {
             bars[0].style.transform = 'none';
             bars[1].style.opacity = '1';
@@ -20,32 +22,55 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Close mobile menu when a link is clicked
+    // Close menu when clicking a link
     document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', () => {
             navMenu.classList.remove('active');
-            // Reset hamburger icon
-            const bars = mobileMenu.querySelectorAll('.bar');
+            mobileMenuBtn.classList.remove('open');
             bars[0].style.transform = 'none';
             bars[1].style.opacity = '1';
             bars[2].style.transform = 'none';
         });
     });
 
-    // Smooth Scrolling for anchor links
+    // Schedule Tabs
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const scheduleContents = document.querySelectorAll('.schedule-content');
+
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Remove active class from all buttons
+            tabBtns.forEach(b => b.classList.remove('active'));
+            // Add active class to clicked button
+            btn.classList.add('active');
+
+            // Hide all contents
+            scheduleContents.forEach(content => {
+                content.style.display = 'none';
+                content.classList.remove('active');
+            });
+
+            // Show target content
+            const targetId = btn.getAttribute('data-target');
+            const targetContent = document.getElementById(targetId);
+            if (targetContent) {
+                targetContent.style.display = 'block';
+                // Small timeout to allow display:block to apply before opacity transition if we added one
+                setTimeout(() => {
+                    targetContent.classList.add('active');
+                }, 10);
+            }
+        });
+    });
+
+    // Smooth Scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-
-            const targetElement = document.querySelector(targetId);
-
-            if (targetElement) {
-                // Adjust for fixed navbar height
-                const headerOffset = 80;
-                const elementPosition = targetElement.getBoundingClientRect().top;
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                const headerOffset = 70;
+                const elementPosition = target.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
                 window.scrollTo({
@@ -56,41 +81,41 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Intersection Observer for scroll animations
+    // Scroll Animation Observer
     const observerOptions = {
-        threshold: 0.1
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
     };
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('fade-in-up');
-                observer.unobserve(entry.target);
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Only animate once
             }
         });
     }, observerOptions);
 
-    document.querySelectorAll('.section-title, .content-wrapper, .committee-card, .leader-card, .message-box').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+    // Select elements to animate
+    const animateElements = document.querySelectorAll('.section-title, .committee-card, .pricing-card, .sg-content-grid, .benefit-item, .team-member, .hero-content');
+
+    animateElements.forEach((el, index) => {
+        el.classList.add('fade-in-up');
+        // Add staggered delay for cards
+        if (el.classList.contains('committee-card') || el.classList.contains('benefit-item')) {
+            el.style.transitionDelay = `${index * 0.1}s`;
+        }
         observer.observe(el);
     });
 
-    // Add class for animation when visible
-    document.body.addEventListener('animationend', (e) => {
-        if (e.animationName === 'fadeInUp') {
-            e.target.style.opacity = '1';
+    // Navbar Scroll Effect
+    const header = document.querySelector('.site-header');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
         }
     });
 
-    // Hacky fix to inject animation class via JS for observed elements
-    const style = document.createElement('style');
-    style.innerHTML = `
-        .fade-in-up {
-            opacity: 1 !important;
-            transform: translateY(0) !important;
-        }
-    `;
-    document.head.appendChild(style);
 });
