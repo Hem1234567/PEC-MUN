@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loyola Model United Nations</title>
+    <title>PEC-MUN</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap"
         rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -22,8 +22,8 @@
     <header class="site-header">
         <div class="container">
             <nav class="navbar">
-                <a href="#" class="logo">
-                    <img src="assets/PEC MUN CLUB LOGO.png" alt="Loyola MUN Logo" class="logo-img">
+                <a href="#home" class="logo">
+                    <img src="assets/PEC MUN CLUB LOGO.png" alt="PEC MUN Logo" class="logo-img">
                 </a>
                 <div class="menu-toggle" id="mobile-menu">
                     <span class="bar"></span>
@@ -32,10 +32,9 @@
                 </div>
                 <ul class="nav-menu">
                     <li><a href="#home" class="nav-link">Home</a></li>
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#committees" class="nav-link">Committees</a></li>
-                    <li><a href="#schedule" class="nav-link">Schedule</a></li>
-                    <li><a href="#register" class="nav-link btn-nav">Register Now</a></li>
+                    <li><a href="#about-pec" class="nav-link">About PEC</a></li>
+                    <li><a href="#about-pec-mun" class="nav-link">About MUN</a></li>
+                    <li><a href="#team" class="nav-link">Team</a></li>
                 </ul>
             </nav>
         </div>
@@ -43,268 +42,214 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero-section">
-        <div class="hero-overlay"></div>
-        <div class="container hero-content">
-            <h1 class="hero-title animate-text">Loyola Model<br>United Nations</h1>
-            <div class="hero-buttons animate-text delay-1">
-                <a href="#register" class="btn btn-primary">Register Now</a>
-            </div>
-        </div>
-    </section>
+        <div class="container hero-content text-center">
+            <p class="hero-tagline">Panimalar Engineering College presents</p>
+            <h1 class="hero-titles glow-text">PEC MUN 2025</h1>
+            <p class="hero-sub-tagline">Model United Nations Conference</p>
 
-    <!-- About Section -->
-    <section id="about" class="section">
-        <div class="container grid-2-col">
-            <div class="about-text-left">
-                <h2 class="section-title">About Loyola MUN</h2>
-                <div class="divider"></div>
-                <p>Loyola Model United Nations is a premier simulation of the United Nations where students step into
-                    the shoes of diplomats to discuss global issues. Our conference aims to foster leadership, public
-                    speaking, and negotiation skills among the youth.</p>
-                <p>We believe in the power of dialogue to change the world. Join us for an unforgettable experience of
-                    diplomacy and debate.</p>
-            </div>
-            <div class="about-text-right">
-                <h3 class="subsection-title">A Legacy of Excellence</h3>
-                <p>For years, Loyola MUN has been a platform for aspiring leaders. We have hosted delegates from across
-                    the region, providing a space for intellectual growth and networking.</p>
-                <ul class="check-list">
-                    <li><i class="fas fa-check"></i> Experienced Executive Board</li>
-                    <li><i class="fas fa-check"></i> Diverse Committees</li>
-                    <li><i class="fas fa-check"></i> Networking Opportunities</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Secretary General Message -->
-    <section id="sg-message" class="section bg-light">
-        <div class="container">
-            <h2 class="section-title">Letter from the Secretary General</h2>
-            <div class="divider center"></div>
-            <div class="sg-content-grid">
-                <div class="sg-image">
-                    <!-- Placeholder image -->
-                    <div class="image-placeholder"><i class="fas fa-user-tie"></i></div>
+            <div class="countdown-container">
+                <div class="countdown-item">
+                    <span id="days">00</span>
+                    <p>Days</p>
                 </div>
-                <div class="sg-text">
-                    <p>"Dear Delegates,</p>
-                    <p>It is my distinct honor to welcome you to the Loyola Model United Nations. As Secretary-General,
-                        I am thrilled to witness the passion and intellect that each of you brings to this conference.
-                    </p>
-                    <p>In a world facing complex challenges, it is the youth who must rise to the occasion. I encourage
-                        you to engage deeply, debate passionately, and collaborate effectively.</p>
-                    <p>Let us make this conference a testament to the power of diplomacy."</p>
-                    <div class="signature">
-                        <strong>[Name]</strong><br>
-                        Secretary-General
+                <div class="countdown-item">
+                    <span id="hours">00</span>
+                    <p>Hours</p>
+                </div>
+                <div class="countdown-item">
+                    <span id="minutes">00</span>
+                    <p>Minutes</p>
+                </div>
+                <div class="countdown-item">
+                    <span id="seconds">00</span>
+                    <p>Seconds</p>
+                </div>
+            </div>
+
+            <p class="hero-subtitle">Debate. Deliberate. Decide.</p>
+
+            <div class="hero-buttons">
+                <a href="#register" class="btn btn-gold large">Register Now</a>
+                <a href="#about-pec-mun" class="btn btn-outline large">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- About PEC Section -->
+    <section id="about-pec" class="section black-bg">
+        <div class="container grid-2-col">
+            <div class="about-text">
+                <h2 class="section-title"><span class="icon-star"><i class="fas fa-star"></i></span> ABOUT PEC</h2>
+                <h3 class="subsection-title">Panimalar Engineering College</h3>
+                <p>Panimalar Engineering College, known for its commitment to academic excellence, discipline, and
+                    holistic development, has consistently nurtured students to excel in both technical expertise and
+                    leadership. With a strong academic foundation and a vibrant campus environment, the institution
+                    encourages innovation, critical thinking, and socially responsible action. In alignment with these
+                    values, PEC MUN stands as an extension of the college's vision—providing a platform where students
+                    engage in global discourse, embrace diverse perspectives, and uphold the spirit of informed
+                    leadership that defines Panimalar Engineering College.</p>
+
+                <div class="stats-row">
+                    <div class="stat">
+                        <span class="stat-number">30+</span>
+                        <span class="stat-label">Years of Excellence</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">A++</span>
+                        <span class="stat-label">NAAC Grade</span>
                     </div>
                 </div>
             </div>
+            <div class="about-image">
+                <div class="image-frame">
+                    <!-- Placeholder for Building Image -->
+                    <img src="assets/pec-building.jpg" alt="Panimalar Engineering College Building"
+                        onerror="this.src='https://placehold.co/600x400/111/gold?text=PEC+Building'">
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Committees Section -->
-    <section id="committees" class="section">
+    <!-- About PEC MUN Section (Consolidated) -->
+    <section id="about-pec-mun" class="section black-bg">
+        <div class="container grid-2-col">
+            <div class="about-text">
+                <h2 class="section-title"><span class="icon-star"><i class="fas fa-star"></i></span> About PEC MUN</h2>
+                <h3 class="subsection-title">Panimalar Engineering College’s Model United Nations</h3>
+                <p>PEC MUN (Panimalar Engineering College Model United Nations) is the official Model United Nations
+                    conference organized by the MUN Club of Panimalar Engineering College, Chennai, functioning as a
+                    dynamic academic simulation of the United Nations where students assume the roles of global
+                    diplomats, policymakers, and international representatives to deliberate on pressing global
+                    challenges. Designed to provide an immersive diplomatic experience, PEC MUN enables delegates to
+                    represent countries, research assigned agendas, participate in structured committee debates, and
+                    collaboratively draft resolutions aimed at addressing real-world issues.</p>
+            </div>
+            <div class="about-image">
+                <div class="image-frame logo-frame">
+                    <img src="assets/PEC MUN CLUB LOGO.png" alt="PEC MUN Logo"
+                        onerror="this.src='https://placehold.co/400x400/111/d4af37?text=PEC+MUN+Logo'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Address from SG -->
+    <section id="sg-message" class="section dark-grey-bg">
         <div class="container">
-            <h2 class="section-title">Our Committees</h2>
-            <div class="divider center"></div>
-            <div class="committees-grid">
-                <!-- Card 1 -->
-                <div class="committee-card">
-                    <div class="card-icon"><i class="fas fa-globe-americas"></i></div>
-                    <h3>UNGA</h3>
-                    <p>United Nations General Assembly</p>
-                    <a href="#" class="link-arrow">View Agenda <i class="fas fa-arrow-right"></i></a>
+            <div class="sg-header">
+                <div class="red-dot"></div>
+                <h2 class="section-title">Address from the Secretary General</h2>
+            </div>
+
+            <div class="sg-content-wrapper">
+                <div class="sg-text-box">
+                    <p class="quote">"History is not just a record of the past, it is a manual for the future. At PEC
+                        MUN, we do not merely debate global challenges; we strive to shape solutions for tomorrow."</p>
+                    <p>It is my honor to welcome you to PEC MUN – Panimalar Engineering College Model United Nations. As
+                        the official MUN conference of our institution, it brings together dedicated delegates who step
+                        into the roles of diplomats and policymakers to deliberate on pressing global issues.</p>
+                    <p>At PEC MUN, we foster an immersive environment of research, negotiation, and structured debate,
+                        encouraging meaningful collaboration and solution-driven discussions.</p>
+                    <div class="sg-signature">
+                        <strong>[Secretary General Name]</strong>
+                        <span>Secretary General, PEC MUN</span>
+                    </div>
                 </div>
-                <!-- Card 2 -->
-                <div class="committee-card">
-                    <div class="card-icon"><i class="fas fa-balance-scale"></i></div>
-                    <h3>UNHRC</h3>
-                    <p>United Nations Human Rights Council</p>
-                    <a href="#" class="link-arrow">View Agenda <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <!-- Card 3 -->
-                <div class="committee-card">
-                    <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
-                    <h3>UNSC</h3>
-                    <p>United Nations Security Council</p>
-                    <a href="#" class="link-arrow">View Agenda <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <!-- Card 4 -->
-                <div class="committee-card">
-                    <div class="card-icon"><i class="fas fa-newspaper"></i></div>
-                    <h3>International Press</h3>
-                    <p>Journalism and Photography</p>
-                    <a href="#" class="link-arrow">View Agenda <i class="fas fa-arrow-right"></i></a>
+                <div class="sg-photo">
+                    <img src="assets/sg-photo.jpg" alt="Secretary General"
+                        onerror="this.src='https://placehold.co/400x500/111/gold?text=Secretary+General'">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Schedule Section -->
-    <section id="schedule" class="section bg-pattern">
+    <!-- Leadership Team -->
+    <section id="team" class="section black-bg">
         <div class="container">
-            <h2 class="section-title text-center text-white">Conference Schedule</h2>
-            <div class="divider center white"></div>
+            <h2 class="section-title text-center gold-text">MUN Leadership Team</h2>
 
-            <div class="schedule-tabs">
-                <button class="tab-btn active" data-target="day1">Day 1</button>
-                <button class="tab-btn" data-target="day2">Day 2</button>
-            </div>
+            <h3 class="team-category text-center">Our Core Secretariat Team</h3>
 
-            <div class="schedule-content active" id="day1">
-                <div class="schedule-item">
-                    <div class="time">08:00 AM</div>
-                    <div class="event">Registration</div>
-                </div>
-                <div class="schedule-item">
-                    <div class="time">09:30 AM</div>
-                    <div class="event">Opening Ceremony</div>
-                </div>
-                <div class="schedule-item">
-                    <div class="time">11:00 AM</div>
-                    <div class="event">Committee Session I</div>
-                </div>
-                <div class="schedule-item">
-                    <div class="time">01:00 PM</div>
-                    <div class="event">Lunch Break</div>
-                </div>
-                <div class="schedule-item">
-                    <div class="time">02:00 PM</div>
-                    <div class="event">Committee Session II</div>
-                </div>
-            </div>
-
-            <div class="schedule-content" id="day2" style="display: none;">
-                <div class="schedule-item">
-                    <div class="time">09:00 AM</div>
-                    <div class="event">Committee Session III</div>
-                </div>
-                <div class="schedule-item">
-                    <div class="time">12:00 PM</div>
-                    <div class="event">Lunch Break</div>
-                </div>
-                <div class="schedule-item">
-                    <div class="time">01:30 PM</div>
-                    <div class="event">Committee Session IV</div>
-                </div>
-                <div class="schedule-item">
-                    <div class="time">04:00 PM</div>
-                    <div class="event">Closing Ceremony</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Registration Section -->
-    <section id="register" class="section">
-        <div class="container">
-            <h2 class="section-title text-center">Registration Information</h2>
-            <div class="divider center"></div>
-            <div class="registration-grid">
-                <!-- Plan 1 -->
-                <div class="pricing-card">
-                    <h3>Delegate</h3>
-                    <div class="price">₹[Amount]</div>
-                    <ul>
-                        <li><i class="fas fa-check"></i> Delegate Kit</li>
-                        <li><i class="fas fa-check"></i> Lunch & High Tea</li>
-                        <li><i class="fas fa-check"></i> Socials Entry</li>
-                    </ul>
-                    <a href="#" class="btn btn-primary full-width">Register</a>
-                </div>
-                <!-- Plan 2 -->
-                <div class="pricing-card featured">
-                    <h3>International Press</h3>
-                    <div class="price">₹[Amount]</div>
-                    <ul>
-                        <li><i class="fas fa-check"></i> Press Kit</li>
-                        <li><i class="fas fa-check"></i> Lunch & High Tea</li>
-                        <li><i class="fas fa-check"></i> Photography Access</li>
-                    </ul>
-                    <a href="#" class="btn btn-outline full-width">Register</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Benefits Section -->
-    <section class="section bg-light">
-        <div class="container text-center">
-            <h2 class="section-title">Delegate Benefits</h2>
-            <div class="divider center"></div>
-            <div class="benefits-grid">
-                <div class="benefit-item">
-                    <i class="fas fa-certificate"></i>
-                    <h4>Certification</h4>
-                    <p>Official certificates for all participants.</p>
-                </div>
-                <div class="benefit-item">
-                    <i class="fas fa-utensils"></i>
-                    <h4>Meals</h4>
-                    <p>Delicious lunch and refreshments provided.</p>
-                </div>
-                <div class="benefit-item">
-                    <i class="fas fa-network-wired"></i>
-                    <h4>Networking</h4>
-                    <p>Connect with peers from various institutions.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Team Section -->
-    <section id="team" class="section">
-        <div class="container">
-            <h2 class="section-title text-center">Our Team</h2>
-            <div class="divider center"></div>
             <div class="team-grid">
-                <!-- Member 1 -->
-                <div class="team-member">
-                    <div class="member-photo"></div>
-                    <h4>[Name]</h4>
-                    <p>Secretary General</p>
+                <!-- Team Member 1 -->
+                <div class="card dark">
+                    <img src="https://placehold.co/400x600/1a1a1a/D4AF37?text=Member+1" alt="Secretary General" />
+                    <section>
+                        <h2>Member Name</h2>
+                        <p>Secretary General of PEC MUN. Leading delegations towards impactful global resolutions.</p>
+
+                    </section>
                 </div>
-                <!-- Member 2 -->
-                <div class="team-member">
-                    <div class="member-photo"></div>
-                    <h4>[Name]</h4>
-                    <p>Director General</p>
+                <!-- Team Member 2 -->
+                <div class="card dark">
+                    <img src="https://placehold.co/400x600/1a1a1a/D4AF37?text=Member+2" alt="Director General" />
+                    <section>
+                        <h2>Member Name</h2>
+                        <p>Director General of PEC MUN. Overseeing committee operations and delegate experience.</p>
+
+                    </section>
                 </div>
-                <!-- Member 3 -->
-                <div class="team-member">
-                    <div class="member-photo"></div>
-                    <h4>[Name]</h4>
-                    <p>USG Administration</p>
+                <!-- Team Member 3 -->
+                <div class="card dark">
+                    <img src="https://placehold.co/400x600/1a1a1a/D4AF37?text=Member+3" alt="Charge d'Affaires" />
+                    <section>
+                        <h2>Member Name</h2>
+                        <p>Chargé d'Affaires at PEC MUN. Bridging diplomatic dialogue and academic excellence.</p>
+
+                    </section>
                 </div>
             </div>
+
+            <h3 class="team-category text-center mt-5">Under Secretary Generals</h3>
+            <div class="team-grid usg-grid">
+                <!-- USG 1 -->
+                <div class="card dark">
+                    <img src="https://placehold.co/400x600/1a1a1a/D4AF37?text=USG+1" alt="USG Admin" />
+                    <section>
+                        <h2>Name Redacted</h2>
+                        <p>Under Secretary General – Administration. Coordinating all internal affairs smoothly.</p>
+
+                    </section>
+                </div>
+                <!-- USG 2 -->
+                <div class="card dark">
+                    <img src="https://placehold.co/400x600/1a1a1a/D4AF37?text=USG+2" alt="USG Logistics" />
+                    <section>
+                        <h2>Name Redacted</h2>
+                        <p>Under Secretary General – Logistics. Ensuring seamless event execution and operations.</p>
+
+                    </section>
+                </div>
+                <!-- USG 3 -->
+                <div class="card dark">
+                    <img src="https://placehold.co/400x600/1a1a1a/D4AF37?text=USG+3" alt="USG Delegate Affairs" />
+                    <section>
+                        <h2>Name Redacted</h2>
+                        <p>Under Secretary General – Delegate Affairs. Champion of delegate welfare and engagement.</p>
+
+                    </section>
+                </div>
+                <!-- USG 4 -->
+                <div class="card dark">
+                    <img src="https://placehold.co/400x600/1a1a1a/D4AF37?text=USG+4" alt="USG Finance" />
+                    <section>
+                        <h2>Name Redacted</h2>
+                        <p>Under Secretary General – Finance. Managing budgets and financial planning with precision.
+                        </p>
+
+                    </section>
+                </div>
+            </div>
+
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="site-footer">
-        <div class="container footer-grid">
-            <div class="footer-info">
-                <h3>Loyola MUN</h3>
-                <p>Empowering the next generation of leaders through diplomacy and debate.</p>
-            </div>
-            <div class="footer-contact">
-                <h3>Contact Us</h3>
-                <p><i class="fas fa-envelope"></i> info@loyolamun.com</p>
-                <p><i class="fas fa-phone"></i> +91 12345 67890</p>
-            </div>
-            <div class="footer-social">
-                <h3>Follow Us</h3>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom text-center">
-            <p>&copy; 2026 Loyola Model United Nations. All Rights Reserved.</p>
+        <div class="container footer-content text-center">
+            <img src="assets/PEC MUN CLUB LOGO.png" alt="Logo" class="footer-logo">
+            <p>&copy; 2025 PEC MUN. All Rights Reserved.</p>
         </div>
     </footer>
 
